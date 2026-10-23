@@ -6,4 +6,5 @@ from .models import Cat
 class CatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cat
-        fields = '__all__'
+        fields = ('id', 'name', 'color', 'birth_year', 'owner')
+        read_only_fields = ('owner',)
